@@ -1,0 +1,516 @@
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body, html{
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 180%;
+  color: #F6F6F7;
+  text-align: center;
+}
+
+
+
+.section-fluid-main{
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+.section-2{
+  position: relative;
+  max-width: calc(100% - 40px);
+  width: 860px;
+  margin: 0 auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 100px 0;
+}
+.section-fluid{
+  position: relative;
+  width: 100%;
+  display: block;
+}
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked){
+  position: absolute;
+  visibility: hidden;
+}
+.size-btn:checked + label,
+.size-btn:not(:checked) + label{
+  position: relative;
+  height: 40px;
+  transition: all 200ms linear;
+  border-radius: 4px;
+  width: 40px;
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
+  color: #222222;
+  margin-right: 10px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+  z-index: 10;
+  background-position: center;
+  background-size: cover;
+  border: 3px solid transparent;
+}
+.size-btn:checked:checked + label{
+  border-color: #222222;
+  transform: scale(1.1);
+}
+/* This at first had diffrent colors where i was going to photoshop different colors but ran out of time */
+label.first-color{
+  margin-left: 500px;
+  background-image: url('S');
+}
+label.sizeM{
+  background-image: url('M');
+}
+label.sizeL{
+  background-image: url('L');
+}
+
+
+.img-wrap{
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 500px;
+  height: 100%;
+  display: inline-block;
+  z-index: 9;
+  transition: all 550ms linear;
+  transition-delay: 100ms;
+  background-position: center top;
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-image: url(image/classic-tee.jpg);
+
+}
+.info-wrap{
+  position: relative;
+  margin-left: 500px;
+  z-index: 10;
+  display: block;
+  text-align: left;
+}
+.title-up {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 13px;
+  line-height: 1.2;
+  color: #000000;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+h1{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 34px;
+    line-height: 1.2;
+    color: #222222;
+    margin-top: 0;
+    margin-bottom: 10px;
+
+}
+h2{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 34px;
+  line-height: 1.2;
+  color: #000000;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+h3{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 1.5;
+  color: #222222;
+  margin-top: 0;
+  margin-bottom: 10px;
+
+}
+h4{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 1.2;
+  color: #000000;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+h4 span{
+  text-decoration: line-through;
+  font-size: 20px;
+  opacity: 0.6;
+  padding-left: 15px;
+}
+h5{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.2;
+  color: #000000;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+.desc-btn:checked + label,
+.desc-btn:not(:checked) + label{
+  position: relative;
+  transition: all 200ms linear;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  color: #ffeba7;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.2;
+  color: #3d3d3d;
+  margin-right: 25px;
+  opacity: 0.5;
+}
+.desc-btn:checked + label{
+  opacity: 1;
+}
+.desc-btn:not(:checked) + label:hover {
+  opacity: 0.8;
+}
+
+.desc-sec {
+  padding-top: 20px;
+  padding-bottom: 30px;
+  transition: all 250ms linear;
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
+  transform: translateY(20px);
+}
+.desc-sec.accor-2 {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+#desc-1:checked ~ .desc-sec.accor-1 {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+#desc-2:checked ~ .desc-sec.accor-2 {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+.section-inline{
+  position: relative;
+  display: inline-block;
+  margin-right: 20px;
+}
+.section-inline p span{
+  font-size: 30px;
+  line-height: 1.1;
+}
+
+.btn{
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 2;
+  height: 48px;
+  border: 2px solid #020202;
+  width: 210px;
+  letter-spacing: 1px;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+  background-color: transparent;
+  color: #888888;
+  transition: all 0.2s linear;
+  text-decoration: none;
+  margin-top: 50px;
+}
+.icon {
+  padding-right: 7px;
+  font-size: 20px;
+}
+.btn:before{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: '';
+  z-index: -1;
+  background-color: transparent;
+  transition: background-color 250ms 300ms ease;
+}
+.btn:hover{
+  box-shadow: 0 12px 35px 0 rgba(10, 24, 71, 0.25);
+  background-color: #222222;
+  border: 2px solid #CCCCCC;
+
+  
+}
+.error {
+    color: red;
+    display: none;
+}
+.size-button {
+    position: relative;
+    margin: 2px;
+    align-content: space-between;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    background-color: #F6F6F7;
+    cursor: pointer;
+}
+.size-button.active {
+    background-color: #F6F6F7;
+    border-color: #222222;
+}
+.hidden {
+    display: none;
+}
+
+
+
+.clearfix {
+  width: 100%;
+}
+.clearfix::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+
+
+.logo {
+  position: fixed;
+  top: 25px;
+  left: 25px;
+  display: block;
+  z-index: 1000;
+  transition: all 250ms linear;
+}
+.logo img {
+  height: 76px;
+  width: auto;
+  display: block;
+  transition: filter 250ms 700ms linear;
+}
+.cart-icon-pos{
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  top: 25px;
+  right: 25px;
+  display: block;
+  z-index: 1000;
+  transition: all 250ms linear;
+  color: #000;
+
+}
+.nav{
+
+}
+.nav :hover{
+  
+}
+
+@media screen and (max-width: 991px) {
+  .section-2{
+    margin: 0 auto;
+    text-align: center;
+    max-width: calc(100% - 40px);
+    width: 370px;
+  }
+  label.first-color{
+    margin-left: 0px;
+  }
+  .info-wrap{
+    margin-left: 0;
+    width: 370px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .img-wrap{
+    width: 375px;
+    height: 308px;
+    left: 50%;
+    margin-left: -190px;
+  }
+  .mob-margin {
+    margin-top: 320px;
+  }
+  .desc-btn:checked + label,
+  .desc-btn:not(:checked) + label{
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+  .size-btn:checked:checked + label,
+  .size-btn:not(:checked) + label{
+    height: 30px;
+    width: 30px;
+    margin: 2px ;
+    text-align: center;
+  }
+  .section-inline{
+    margin: 0 5px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .section-2{
+    width: 280px;
+  }
+  .info-wrap{
+    width: 280px;
+  }
+  .size-btn:checked + label,
+  .size-btn:not(:checked) + label{
+    height: 30px;
+    width: 30px;
+  }
+  .section-inline p span{
+    font-size: 24px;
+    line-height: 1.1;
+  }
+  .section-inline p{
+    font-size: 14px;
+  }
+
+}
+
+.parallaxImage{
+    background: url(https://www.moustacherepublic.com/wp-content/uploads/2020/03/1AS-Colour-1.jpg);
+    min-height: 100%;
+/*https://www.moustacherepublic.com/wp-content/uploads/2020/03/1AS-Colour-1.jpg*/
+}
+
+.parallaxImage{
+    position: relative;
+    opacity: .75;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.Heading{
+    position: absolute;
+    color: #888888 ;
+    font-size: 200%;
+    top: 80%;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-shadow: 0 0 10px #222222 ;
+}
+.Heading-small{
+    position: absolute;
+    top: 45%;
+    width: 100%;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-shadow: 0 0 10px #000;
+}
+.two-col{
+    float: left;
+    width: 50%;
+    padding: 0 4%;
+    text-align: left;
+
+}
+p{
+    color: #222222 ;
+}
+section{
+    overflow: auto;
+    padding: 50px 80px;
+}
+.Dark{
+    overflow: auto;
+    padding: 50px 80px;
+    background-color: #F6F6F7;
+    color: #222222 ;
+}
+ @media (max-width: 760px) {
+    .Heading{
+        font-size: 250%;
+    }
+    .Heading-small{
+        font-size: 180%;
+    }
+    .two-col{
+        width: 100%;
+        padding: 0;
+        text-align: center;
+    }
+
+ }
+ .footer {
+    background-color: #F6F6F7;
+    color: #888888;
+    text-align: center;
+  }
+  
+  .footer__container {
+    padding: 3rem 0;
+  }
+  
+  .footer__title {
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+  
+  .footer__description {
+    margin-bottom: 0;
+  }
+  
+  .footer__social {
+    margin-bottom: 0;
+  }
+  
+  .footer__link {
+    font-size: 1.8rem;
+    color: #888888;
+    margin: 0 ;
+    transition: .3s;
+  }
+  
+  .footer__link:hover {
+    color: #222222;
+  }
+  
+  .footer__copy {
+    font-size: 20px;
+    color:#222222 ;
+  }
